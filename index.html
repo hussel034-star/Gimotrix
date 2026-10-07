@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Digital Marketplace — Master Wireframe</title>
+<style>
+  :root{
+    --bg:#0b0f1a;
+    --panel:#111827;
+    --panel-2:#0f172a;
+    --line:#1f2937;
+    --txt:#e5e7eb;
+    --muted:#94a3b8;
+    --accent:#22d3ee;
+    --accent-2:#a78bfa;
+    --good:#34d399;
+    --warn:#fbbf24;
+    --danger:#f87171;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:radial-gradient(1200px 600px at 20% -10%, #1e293b 0%, var(--bg) 60%);
+    color:var(--txt);
+    line-height:1.5;
+    padding:32px 20px 80px;
+  }
+  .wrap{max-width:1200px;margin:0 auto}
+
+  /* HEADER */
+  header{
+    text-align:center;
+    padding:36px 24px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,#0f172a,#111827);
+    margin-bottom:28px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;inset:0;
+    background:radial-gradient(600px 200px at 50% 0%, rgba(34,211,238,.15), transparent 70%);
+    pointer-events:none;
+  }
+  .brand{
+    font-size:clamp(20px,3vw,30px);
+    font-weight:800;
+    letter-spacing:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  header p{color:var(--muted);margin-top:10px;font-size:14px}
+
+  /* SECTION */
+  section{margin-bottom:28px}
+  .sec-title{
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:14px;
+    font-weight:700;
+  }
+
+  /* GRID */
+  .grid{display:grid;gap:14px}
+  .g5{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+
+  /* CARD */
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px;
+    transition:.2s;
+  }
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card h4{font-size:15px;margin-bottom:8px}
+  .card p{font-size:13px;color:var(--muted)}
+  .icon{
+    width:34px;height:34px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;margin-bottom:10px;
+    background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(167,139,250,.2));
+    border:1px solid var(--line);
+  }
+
+  /* PILLAR */
+  .pillar{
+    text-align:center;
+    padding:16px 12px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:12px;
+  }
+  .pillar span{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--accent)}
+
+  /* ROLE */
+  .role{
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+    border-top:3px solid var(--accent);
+  }
+  .role h4{font-size:14px;color:#fff}
+  .role p{font-size:12px;color:var(--muted);margin-top:6px}
+
+  /* FLOW */
+  .flow{
+    display:flex;flex-wrap:wrap;gap:10px;
+    align-items:center;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px;
+  }
+  .step{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:9px 14px;
+    border-radius:20px;
+    font-size:12px;
+    white-space:nowrap;
+  }
+  .step.hot{border-color:var(--accent);color:var(--accent);box-shadow:0 0 0 1px rgba(34,211,238,.2)}
+  .arrow{color:var(--accent-2);font-size:14px}
+
+  /* SELLER DASHBOARD */
+  .dash{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--panel);
+  }
+  @media(max-width:700px){.dash{grid-template-columns:1fr}}
+  .sidebar{
+    background:var(--panel-2);
+    padding:18px 14px;
+    border-right:1px solid var(--line);
+  }
+  .sidebar .logo{
+    font-size:13px;font-weight:800;letter-spacing:1px;
+    color:var(--accent);margin-bottom:16px;
+  }
+  .sidebar a{
+    display:block;
+    padding:9px 12px;
+    font-size:13px;
+    color:var(--muted);
+    text-decoration:none;
+    border-radius:8px;
+    margin-bottom:4px;
+    transition:.15s;
+  }
+  .sidebar a:hover{background:var(--panel);color:#fff}
+  .sidebar a.active{background:linear-gradient(90deg,rgba(34,211,238,.15),transparent);color:var(--accent);border-left:3px solid var(--accent)}
+  .main-panel{padding:20px}
+  .panel-box{
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:14px;
+  }
+  .panel-box h4{font-size:13px;color:var(--accent);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase}
+  .field{
+    display:flex;justify-content:space-between;
+    padding:8px 0;border-bottom:1px dashed var(--line);
+    font-size:12px;
+  }
+  .field:last-child{border-bottom:none}
+  .field span:first-child{color:var(--muted)}
+  .field span:last-child{color:#fff;font-weight:600}
+
+  /* PRODUCT HIERARCHY */
+  .prod{
+    display:flex;justify-content:space-between;align-items:center;
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:10px;padding:12px 14px;margin-bottom:8px;
+  }
+  .prod small{color:var(--muted);font-size:11px;display:block}
+  .prod .price{color:var(--good);font-weight:700;font-size:13px}
+
+  /* CONSIDERATIONS */
+  .cons h4{font-size:13px;color:var(--accent-2);margin-bottom:10px;letter-spacing:1px;text-transform:uppercase}
+  .cons ul{list-style:none}
+  .cons li{
+    font-size:12px;color:var(--muted);
+    padding:5px 0 5px 18px;position:relative;
+  }
+  .cons li::before{
+    content:"▸";position:absolute;left:0;color:var(--accent);
+  }
+
+  /* PHASES */
+  .timeline{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+  .phase{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px;
+    position:relative;
+    border-top:3px solid var(--accent-2);
+  }
+  .phase .num{font-size:11px;color:var(--accent);font-weight:800;letter-spacing:1px}
+  .phase h4{font-size:13px;margin:6px 0}
+  .phase p{font-size:11px;color:var(--muted)}
+  .phase .dur{
+    display:inline-block;margin-top:8px;font-size:10px;
+    padding:3px 8px;border-radius:20px;
+    background:rgba(34,211,238,.1);color:var(--accent);
+    border:1px solid rgba(34,211,238,.3);
+  }
+
+  /* EXPECT */
+  .expect{
+    background:linear-gradient(135deg,#0f172a,#111827);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  .expect .row{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+  }
+  .expect .item{
+    padding:12px 14px;
+    background:var(--panel-2);
+    border-radius:10px;
+    border:1px solid var(--line);
+    font-size:12px;
+  }
+  .expect .item b{color:var(--accent);display:block;font-size:11px;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase}
+
+  /* FOOTER */
+  footer{
+    text-align:center;margin-top:40px;padding:20px;
+    color:var(--muted);font-size:11px;
+    border-top:1px solid var(--line);
+  }
+
+  /* BADGE */
+  .badge{
+    display:inline-block;font-size:10px;font-weight:700;
+    padding:3px 8px;border-radius:20px;letter-spacing:.5px;
+  }
+  .b-good{background:rgba(52,211,153,.15);color:var(--good);border:1px solid rgba(52,211,153,.3)}
+  .b-warn{background:rgba(251,191,36,.15);color:var(--warn);border:1px solid rgba(251,191,36,.3)}
+  .b-danger{background:rgba(248,113,113,.15);color:var(--danger);border:1px solid rgba(248,113,113,.3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">◆ DIGITAL MARKETPLACE — MASTER WIREFRAME</div>
+    <p>Multi-vendor distribution of authorized digital skills, assets & licenses</p>
+  </header>
+
+  <!-- CORE PILLARS -->
+  <section>
+    <div class="sec-title">Core Pillars</div>
+    <div class="grid g5">
+      <div class="pillar"><span>AUTHORIZED DISTRIBUTION</span></div>
+      <div class="pillar"><span>REFERRAL RANKING ENGINE</span></div>
+      <div class="pillar"><span>GOOGLE AUTH</span></div>
+      <div class="pillar"><span>DYNAMIC CHECKOUT</span></div>
+      <div class="pillar"><span>VERIFIED PARTNERS</span></div>
+    </div>
+  </section>
+
+  <!-- USER ROLES -->
+  <section>
+    <div class="sec-title">User Roles</div>
+    <div class="grid g4">
+      <div class="role">
+        <h4>🛒 Buyer / Learner</h4>
+        <p>Search, filter, buy, receive instantly, review.</p>
+      </div>
+      <div class="role" style="border-top-color:var(--accent-2)">
+        <h4>🏪 Seller / Provider</h4>
+        <p>List products, bulk import, track referrals, get paid.</p>
+      </div>
+      <div class="role" style="border-top-color:var(--good)">
+        <h4>🤝 Partner / Brand</h4>
+        <p>Verify, list, co-promote authorized offerings.</p>
+      </div>
+      <div class="role" style="border-top-color:var(--warn)">
+        <h4>🛡️ Super Admin</h4>
+        <p>Moderate, resolve disputes, manage payouts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYER FLOW -->
+  <section>
+    <div class="sec-title">Buyer Interface Flow</div>
+    <div class="flow">
+      <span class="step hot">Referral / Social</span>
+      <span class="arrow">→</span>
+      <span class="step">Google Login</span>
+      <span class="arrow">→</span>
+      <span class="step">Buyer Dashboard</span>
+      <span class="arrow">→</span>
+      <span class="step hot">Search Bar</span>
+      <span class="arrow">→</span>
+      <span class="step">Advanced Filter<br><small style="color:var(--muted)">name | features | price | expiry</small></span>
+      <span class="arrow">→</span>
+      <span class="step">Ranked Results</span>
+      <span class="arrow">→</span>
+      <span class="step">Product Dive-In</span>
+      <span class="arrow">→</span>
+      <span class="step">Seller Profile</span>
+      <span class="arrow">→</span>
+      <span class="step">Quantity +/–</span>
+      <span class="arrow">→</span>
+      <span class="step">Checkout</span>
+      <span class="arrow">→</span>
+      <span class="step hot">Gmail Delivery</span>
+    </div>
+  </section>
+
+  <!-- SELLER DASHBOARD -->
+  <section>
+    <div class="sec-title">Seller Admin Dashboard</div>
+    <div class="dash">
+      <aside class="sidebar">
+        <div class="logo">◆ SELLER PANEL</div>
+        <a href="#" class="active">Profile Information</a>
+        <a href="#">Account Details</a>
+        <a href="#">Payment Connect</a>
+        <a href="#">Referrals & Ranking</a>
+        <a href="#">Rules & Guidance</a>
+        <a href="#">Products / Store</a>
+        <a href="#">Orders</a>
+        <a href="#">Analytics</a>
+        <a href="#">Payouts</a>
+        <a href="#">Logout</a>
+      </aside>
+
+      <div class="main-panel">
+
+        <div class="panel-box">
+          <h4>▸ Product Deposit</h4>
+          <div class="field"><span>Product Name</span><span>e.g. Premium Skill Pack</span></div>
+          <div class="field"><span>Features</span><span>Detailed, specific</span></div>
+          <div class="field"><span>Age / Duration</span><span>e.g. 12 months</span></div>
+          <div class="field"><span>Expiry Date</span><span>Optional</span></div>
+          <div class="field"><span>Import Method</span><span>Manual Paste / File</span></div>
+          <div class="field"><span>Parser</span><span>Comma-separated auto-detect</span></div>
+          <div class="field"><span>Action</span><span class="badge b-good">Review → Publish</span></div>
+        </div>
+
+        <div class="panel-box">
+          <h4>▸ Store View (Hierarchical)</h4>
+          <div class="prod">
+            <div><b>Product 1</b><small>Specs · Features · Expiry</small></div>
+            <div class="price">$12.00</div>
+          </div>
+          <div class="prod">
+            <div><b>Product 2</b><small>Specs · Features · Expiry</small></div>
+            <div class="price">$25.00</div>
+          </div>
+          <div class="prod">
+            <div><b>Product 3</b><small>Specs · Features · Expiry</small></div>
+            <div class="price">$8.50</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSIDERATIONS -->
+  <section>
+    <div class="sec-title">Critical Considerations</div>
+    <div class="grid g3">
+      <div class="card cons">
+        <h4>⚖️ Legal & Compliance</h4>
+        <ul>
+          <li>Authorized distribution proof</li>
+          <li>ToS / Privacy / GDPR / CCPA</li>
+          <li>PCI via Stripe / PayPal</li>
+          <li>Tax / VAT / payouts</li>
+          <li>Referral legality</li>
+        </ul>
+      </div>
+      <div class="card cons">
+        <h4>⚙️ Technical Architecture</h4>
+        <ul>
+          <li>React / Next.js frontend</li>
+          <li>Node / Django backend</li>
+          <li>PostgreSQL + Redis</li>
+          <li>Elasticsearch ranking</li>
+          <li>Gmail API delivery</li>
+        </ul>
+      </div>
+      <div class="card cons">
+        <h4>🔧 Operations</h4>
+        <ul>
+          <li>Seller onboarding & KYC</li>
+          <li>Customer support</li>
+          <li>Payouts & currency</li>
+          <li>Content moderation</li>
+          <li>Analytics & growth</li>
+        </ul>
+      </div>
+      <div class="card cons">
+        <h4>🔐 Security & Fraud</h4>
+        <ul>
+          <li>Referral abuse guard</li>
+          <li>Payment fraud scoring</li>
+          <li>Credential encryption</li>
+          <li>Account takeover protection</li>
+          <li>Breach response plan</li>
+        </ul>
+      </div>
+      <div class="card cons">
+        <h4>🎨 UX / UI</h4>
+        <ul>
+          <li>Mobile-first design</li>
+          <li>Low bandwidth optimization</li>
+          <li>Accessibility (a11y)</li>
+          <li>In-app + email notifications</li>
+          <li>PWA support</li>
+        </ul>
+      </div>
+      <div class="card cons">
+        <h4>📈 Business</h4>
+        <ul>
+          <li>Cold start strategy</li>
+          <li>Commission model</li>
+          <li>Dispute resolution</li>
+          <li>Retention & bundles</li>
+          <li>Competition positioning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section>
+    <div class="sec-title">Build Phases</div>
+    <div class="timeline">
+      <div class="phase">
+        <div class="num">PHASE 0</div>
+        <h4>Discovery & Legal</h4>
+        <p>Scope, legal docs, partner agreements, stack choice.</p>
+        <span class="dur">1–2 months</span>
+      </div>
+      <div class="phase">
+        <div class="num">PHASE 1</div>
+        <h4>MVP</h4>
+        <p>Auth, listing, search, checkout, delivery, seller panel.</p>
+        <span class="dur">3–4 months</span>
+      </div>
+      <div class="phase">
+        <div class="num">PHASE 2</div>
+        <h4>Referral & Ranking</h4>
+        <p>Tracking, ranking algorithm, abuse prevention.</p>
+        <span class="dur">2 months</span>
+      </div>
+      <div class="phase">
+        <div class="num">PHASE 3</div>
+        <h4>Bulk Import & Store</h4>
+        <p>CSV/paste parser, review flow, hierarchical store.</p>
+        <span class="dur">2 months</span>
+      </div>
+      <div class="phase">
+        <div class="num">PHASE 4+</div>
+        <h4>Partners, Beta, Scale</h4>
+        <p>Brand integrations, closed beta, launch, iterate.</p>
+        <span class="dur">Ongoing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPECTATIONS -->
+  <section>
+    <div class="sec-title">What to Expect</div>
+    <div class="expect">
+      <div class="row">
+        <div class="item"><b>Timeline</b>4–6 months MVP · 12–18 months full platform</div>
+        <div class="item"><b>Team</b>PM · 2–4 devs · designer · DevOps · QA · legal · support · growth</div>
+        <div class="item"><b>Budget</b>$50k–$200k+ dev · $500–$5k/mo infra · $5k–$20k legal</div>
+        <div class="item"><b>Risks</b>Delays · integration friction · security vigilance · scaling pressure</div>
+        <div class="item"><b>Success</b>Repeat buyers · active sellers · referral flywheel · partner trust</div>
+        <div class="item"><b>Golden Rule</b>Start niche · verify trust early · automate delivery & payouts</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    ◆ MASTER WIREFRAME v1.0 — Ready for refinement into high-fidelity UI or staged specs.
+  </footer>
+
+</div>
+</body>
+</html>
+
