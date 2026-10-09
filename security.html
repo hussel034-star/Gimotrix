@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Security & Replacement Plan — Gimotrix</title>
+<title>Security, Bond & Trust — Gimotrix</title>
 <style>
   :root{
     --bg:#070b14;
@@ -32,8 +32,6 @@
     min-height:100vh;
   }
   .wrap{max-width:1100px;margin:0 auto}
-
-  /* HEADER */
   header{
     text-align:center;
     padding:40px 24px 34px;
@@ -50,19 +48,13 @@
     background:radial-gradient(700px 220px at 50% 0%, rgba(34,211,238,.16), transparent 70%);
     pointer-events:none;
   }
-  .shield{
-    font-size:36px;margin-bottom:12px;
-    filter:drop-shadow(0 0 14px rgba(34,211,238,.5));
-  }
+  .shield{font-size:36px;margin-bottom:12px;filter:drop-shadow(0 0 14px rgba(34,211,238,.5))}
   .brand{
-    font-size:clamp(20px,4vw,30px);
-    font-weight:800;
-    letter-spacing:2px;
+    font-size:clamp(20px,4vw,30px);font-weight:800;letter-spacing:2px;
     background:linear-gradient(90deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;
-    color:transparent;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  header p{color:var(--muted);margin-top:12px;font-size:14px;max-width:620px;margin-left:auto;margin-right:auto}
+  header p{color:var(--muted);margin-top:12px;font-size:14px;max-width:640px;margin-left:auto;margin-right:auto}
   .tagline{
     display:inline-block;margin-top:16px;
     font-size:11px;letter-spacing:2px;font-weight:700;
@@ -70,150 +62,103 @@
     background:rgba(34,211,238,.1);color:var(--accent);
     border:1px solid rgba(34,211,238,.3);
   }
-
-  /* SECTIONS */
   section{margin-bottom:34px}
   .sec-title{
     display:flex;align-items:center;gap:10px;
     font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
-    color:var(--accent);font-weight:800;
-    margin-bottom:16px;
+    color:var(--accent);font-weight:800;margin-bottom:16px;
   }
-  .sec-title::before{
-    content:"";width:22px;height:2px;
-    background:linear-gradient(90deg,var(--accent),transparent);
-  }
-
-  /* PRINCIPLE BANNER */
+  .sec-title::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
   .principle{
     background:linear-gradient(135deg,#0f172a,#0a0f1c);
     border:1px solid var(--line);
     border-left:3px solid var(--accent);
-    border-radius:12px;
-    padding:22px 20px;
-    font-size:15px;
-    color:#fff;
-    line-height:1.6;
+    border-radius:12px;padding:22px 20px;
+    font-size:15px;color:#fff;line-height:1.7;
   }
   .principle b{color:var(--accent)}
-  .principle .contrast{
-    display:block;margin-top:10px;font-size:13px;color:var(--muted);
-  }
+  .principle .contrast{display:block;margin-top:12px;font-size:13px;color:var(--muted)}
   .principle .contrast s{color:var(--danger);text-decoration:line-through}
-
-  /* LADDER */
-  .ladder{display:flex;flex-direction:column;gap:12px}
-  .rung{
-    display:grid;grid-template-columns:70px 1fr;
-    gap:16px;align-items:center;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 20px;
-    position:relative;
-    transition:.2s;
-  }
-  .rung:hover{transform:translateX(4px);border-color:var(--accent)}
-  .rung .lvl{
-    font-size:22px;font-weight:900;
-    text-align:center;
-    letter-spacing:-1px;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .rung h4{font-size:14px;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .rung p{font-size:12.5px;color:var(--muted)}
-  .chip{
-    font-size:9.5px;font-weight:800;letter-spacing:1px;
-    padding:3px 8px;border-radius:20px;
-    background:rgba(52,211,153,.12);color:var(--good);
-    border:1px solid rgba(52,211,153,.3);
-  }
-  .chip.warn{background:rgba(251,191,36,.12);color:var(--warn);border-color:rgba(251,191,36,.3)}
-  .chip.danger{background:rgba(248,113,113,.12);color:var(--danger);border-color:rgba(248,113,113,.3)}
-  .chip.info{background:rgba(34,211,238,.12);color:var(--accent);border-color:rgba(34,211,238,.3)}
-
-  /* BOND TIERS */
-  .tiers{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .tiers{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .tier{
     background:linear-gradient(180deg,var(--panel),var(--panel-2));
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:22px 18px;
-    position:relative;
-    overflow:hidden;
-    transition:.25s;
+    border:1px solid var(--line);border-radius:16px;padding:22px 18px;
+    position:relative;overflow:hidden;transition:.25s;
   }
   .tier:hover{transform:translateY(-4px)}
-  .tier::before{
-    content:"";position:absolute;top:0;left:0;right:0;height:3px;
-  }
-  .tier.starter::before{background:linear-gradient(90deg,#64748b,transparent)}
+  .tier::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+  .tier.free::before{background:linear-gradient(90deg,#64748b,transparent)}
   .tier.verified::before{background:linear-gradient(90deg,var(--accent),transparent)}
   .tier.trusted::before{background:linear-gradient(90deg,var(--good),transparent)}
-  .tier:hover.starter{border-color:#64748b}
+  .tier:hover.free{border-color:#64748b}
   .tier:hover.verified{border-color:var(--accent)}
   .tier:hover.trusted{border-color:var(--good)}
-  .tier .name{
-    font-size:11px;letter-spacing:2px;font-weight:800;
-    color:var(--muted);text-transform:uppercase;
-  }
-  .tier .bond{
-    font-size:26px;font-weight:900;color:#fff;
-    margin:8px 0 4px;letter-spacing:-.5px;
-  }
+  .tier .name{font-size:11px;letter-spacing:2px;font-weight:800;color:var(--muted);text-transform:uppercase}
+  .tier .bond{font-size:22px;font-weight:900;color:#fff;margin:8px 0 4px;letter-spacing:-.5px}
   .tier .bond small{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0}
   .tier ul{list-style:none;margin-top:14px}
-  .tier li{
-    font-size:12.5px;color:var(--muted);
-    padding:5px 0 5px 20px;position:relative;
-  }
-  .tier li::before{
-    content:"✓";position:absolute;left:0;font-weight:900;
-  }
-  .tier.starter li::before{color:#94a3b8}
+  .tier li{font-size:12.5px;color:var(--muted);padding:5px 0 5px 20px;position:relative}
+  .tier li::before{content:"✓";position:absolute;left:0;font-weight:900}
+  .tier li.no::before{content:"✕";color:var(--danger)}
+  .tier.free li::before{color:#94a3b8}
   .tier.verified li::before{color:var(--accent)}
   .tier.trusted li::before{color:var(--good)}
   .tier .badge-final{
     display:inline-block;margin-top:14px;
     font-size:10px;font-weight:800;letter-spacing:1.5px;
     padding:4px 10px;border-radius:20px;
+    background:var(--panel);border:1px solid var(--line);color:var(--muted);
+  }
+  .split-flow{
+    display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    margin-bottom:14px;
+  }
+  .wcard{
     background:var(--panel);border:1px solid var(--line);
-    color:var(--muted);
+    border-radius:12px;padding:16px;position:relative;
   }
-
-  /* TIMELINE */
+  .wcard .label{
+    font-size:10px;letter-spacing:2px;font-weight:800;
+    color:var(--accent);margin-bottom:8px;text-transform:uppercase;
+  }
+  .wcard .amount{font-size:20px;color:#fff;font-weight:900;letter-spacing:-.5px}
+  .wcard .desc{font-size:11.5px;color:var(--muted);margin-top:6px}
+  .wcard.good .label{color:var(--good)}
+  .wcard.good .amount{color:var(--good)}
+  .wcard.bond .label{color:var(--accent-2)}
+  .wcard.bond .amount{color:var(--accent-2)}
+  .example-table{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;
+  }
+  .example-table .row{
+    display:grid;grid-template-columns:1fr 1fr 1fr 1fr;
+    padding:12px 16px;font-size:12.5px;
+    border-bottom:1px solid var(--line);gap:10px;
+  }
+  .example-table .row:last-child{border-bottom:none}
+  .example-table .head{
+    background:var(--panel-2);color:var(--accent);
+    font-weight:800;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  }
+  .example-table .row span{color:#fff}
+  .example-table .row .muted{color:var(--muted)}
   .timeline{
-    background:var(--panel-2);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:24px 22px;
-    position:relative;
+    background:var(--panel-2);border:1px solid var(--line);
+    border-radius:16px;padding:24px 22px;position:relative;
   }
-  .tl-step{
-    display:grid;
-    grid-template-columns:42px 1fr;
-    gap:16px;
-    padding-bottom:22px;
-    position:relative;
-  }
+  .tl-step{display:grid;grid-template-columns:42px 1fr;gap:16px;padding-bottom:22px;position:relative}
   .tl-step:last-child{padding-bottom:0}
   .tl-step:not(:last-child)::before{
-    content:"";
-    position:absolute;
-    left:20px;top:42px;bottom:0;
-    width:2px;
-    background:linear-gradient(180deg,var(--accent),transparent);
+    content:"";position:absolute;left:20px;top:42px;bottom:0;
+    width:2px;background:linear-gradient(180deg,var(--accent),transparent);
   }
   .tl-dot{
     width:42px;height:42px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     font-weight:900;font-size:14px;
-    background:var(--panel);
-    border:2px solid var(--accent);
-    color:var(--accent);
-    position:relative;
-    z-index:1;
+    background:var(--panel);border:2px solid var(--accent);
+    color:var(--accent);position:relative;z-index:1;
   }
   .tl-step.done .tl-dot{background:var(--accent);color:#0b1220}
   .tl-step.warn .tl-dot{border-color:var(--warn);color:var(--warn)}
@@ -221,24 +166,15 @@
   .tl-step.good .tl-dot{border-color:var(--good);color:var(--good)}
   .tl-body h4{font-size:14px;color:#fff;margin-bottom:4px}
   .tl-body p{font-size:12.5px;color:var(--muted)}
-  .tl-body .meta{
-    display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;
-  }
-
-  /* BUYER vs SELLER */
+  .tl-body .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
   .split{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
   .side{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:20px;
-    position:relative;
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;padding:20px;position:relative;
   }
   .side.buyer{border-top:3px solid var(--accent)}
   .side.seller{border-top:3px solid var(--accent-2)}
-  .side h3{
-    font-size:14px;margin-bottom:14px;display:flex;align-items:center;gap:8px;
-  }
+  .side h3{font-size:14px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
   .side.buyer h3{color:var(--accent)}
   .side.seller h3{color:var(--accent-2)}
   .side ul{list-style:none}
@@ -248,344 +184,590 @@
     border-bottom:1px dashed var(--line);
   }
   .side li:last-child{border-bottom:none}
-  .side li::before{
-    content:"▸";position:absolute;left:0;font-weight:900;
-  }
+  .side li::before{content:"▸";position:absolute;left:0;font-weight:900}
   .side.buyer li::before{color:var(--accent)}
   .side.seller li::before{color:var(--accent-2)}
   .side li b{color:#fff;font-weight:600}
-
-  /* ANTI-ABUSE */
-  .abuse{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-  .threat{
-    background:var(--panel-2);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:16px;
-    position:relative;
-    overflow:hidden;
+  .rating-demo{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .rating-demo .row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 0;border-bottom:1px dashed var(--line);font-size:13px;
   }
-  .threat::before{
-    content:"⚠";position:absolute;top:10px;right:12px;
-    font-size:16px;opacity:.35;
+  .rating-demo .row:last-child{border-bottom:none}
+  .rating-demo .stars{color:var(--warn);letter-spacing:2px}
+  .rating-demo .vbadge{
+    font-size:9.5px;padding:2px 8px;border-radius:20px;
+    background:rgba(52,211,153,.12);color:var(--good);
+    border:1px solid rgba(52,211,153,.3);font-weight:700;
+    letter-spacing:1px;margin-left:8px;
   }
-  .threat h5{font-size:12.5px;color:var(--danger);margin-bottom:6px;letter-spacing:.5px}
-  .threat p{font-size:12px;color:var(--muted)}
-  .threat .fix{
-    display:block;margin-top:10px;padding-top:8px;
-    border-top:1px dashed var(--line);
-    font-size:11.5px;color:var(--good);
-  }
-  .threat .fix::before{content:"✓ ";font-weight:900}
-
-  /* MONEY FLOW */
-  .money{
-    background:linear-gradient(135deg,#0a0f1c,#0f172a);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:24px 20px;
-  }
-  .money h3{font-size:14px;color:#fff;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-  .money-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-  .money-card{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:16px;
-  }
-  .money-card .role{
-    font-size:10px;letter-spacing:2px;font-weight:800;
-    color:var(--accent);margin-bottom:8px;
-  }
-  .money-card .holder{
-    font-size:13px;color:#fff;font-weight:700;margin-bottom:4px;
-  }
-  .money-card .desc{
-    font-size:11.5px;color:var(--muted);
-  }
-
-  /* FOOTER */
-  footer{
-    text-align:center;
-    margin-top:50px;
-    padding:24px 16px;
-    color:var(--muted);
-    font-size:11px;
-    border-top:1px solid var(--line);
-  }
-  footer b{color:var(--accent);letter-spacing:1px}
-
-  /* RULE CARD */
-  .rules{
-    display:grid;gap:12px;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  }
+  .rules{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
   .rule{
-    background:var(--panel);
-    border:1px solid var(--line);
+    background:var(--panel);border:1px solid var(--line);
     border-left:3px solid var(--accent-2);
-    border-radius:12px;
-    padding:16px 18px;
+    border-radius:12px;padding:16px 18px;
   }
-  .rule .num{
-    font-size:10px;font-weight:900;letter-spacing:2px;
-    color:var(--accent-2);margin-bottom:6px;
-  }
+  .rule .num{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--accent-2);margin-bottom:6px}
   .rule h5{font-size:13px;color:#fff;margin-bottom:6px}
   .rule p{font-size:12px;color:var(--muted)}
+  .ranking{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .rank-item{
+    background:var(--panel-2);border:1px solid var(--line);
+    border-radius:12px;padding:14px;
+    display:flex;gap:12px;align-items:flex-start;
+  }
+  .rank-item .n{font-size:16px;font-weight:900;color:var(--accent);min-width:24px}
+  .rank-item h5{font-size:12.5px;color:#fff;margin-bottom:3px}
+  .rank-item p{font-size:11.5px;color:var(--muted)}
+  footer{
+    text-align:center;margin-top:50px;padding:24px 16px;
+    color:var(--muted);font-size:11px;border-top:1px solid var(--line);
+  }
+  footer b{color:var(--accent);letter-spacing:1px}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <!-- HEADER -->
   <header>
     <div class="shield">🛡️</div>
-    <div class="brand">SECURITY & REPLACEMENT PLAN</div>
-    <p>The financial and procedural architecture that makes every purchase safe — without ever issuing a cash refund.</p>
-    <div class="tagline">REPLACE · DON'T REFUND</div>
+    <div class="brand">SECURITY, BOND & TRUST</div>
+    <p>Free to join. Instant payouts. Bond-backed trust. A reputation you actually earned.</p>
+    <div class="tagline">FLAT ₦1,000 FEE · 10% PERMANENT BOND · VERIFIED RATINGS ONLY</div>
   </header>
-
-  <!-- CORE PRINCIPLE -->
   <section>
     <div class="sec-title">Core Principle</div>
     <div class="principle">
-      A seller is not selling a <b>login</b>. A seller is selling a <b>working warranty</b>.
+      A seller is not selling a <b>login</b>. A seller is selling a <b>working warranty</b> — backed by their reputation, their bond, and every verified buyer who ever rated them.
       <span class="contrast">
         <s>Old model: buyer pays, gets bad product, begs for refund, loses trust.</s><br>
-        <b>New model:</b> buyer pays, gets a working guarantee, always made whole.
+        <s>Slow model: platform holds payouts, sellers get frustrated, quality drops.</s><br>
+        <b>Gimotrix model:</b> flat fee. Instant wallet credit. Permanent 10% bond. Verified ratings only.
       </span>
     </div>
   </section>
-
-  <!-- THE REPLACEMENT LADDER -->
   <section>
-    <div class="sec-title">The Replacement Ladder</div>
-    <div class="ladder">
-      <div class="rung">
-        <div class="lvl">L1</div>
-        <div>
-          <h4>Seller Replaces <span class="chip">SILENT · FAST</span></h4>
-          <p>Buyer files claim inside app. Seller replaces within 12h. Payout unfreezes. Rating preserved. No drama.</p>
-        </div>
-      </div>
-      <div class="rung">
-        <div class="lvl">L2</div>
-        <div>
-          <h4>Seller Fails — Bond Auto-Pays <span class="chip warn">AUTOMATIC</span></h4>
-          <p>Replacement pulled from the shared pool. Seller's bond is slashed to cover cost. Payout permanently canceled. Rating hit.</p>
-        </div>
-      </div>
-      <div class="rung">
-        <div class="lvl">L3</div>
-        <div>
-          <h4>Repeated Offenses — Ranking Crash <span class="chip danger">ENFORCED</span></h4>
-          <p>3 unresolved claims / 30 days → listings paused. 5 unresolved / 90 days → bond slashed + demoted. 10+ → account suspended, remaining bond used for buyers.</p>
-        </div>
-      </div>
-      <div class="rung">
-        <div class="lvl">✓</div>
-        <div>
-          <h4>Buyer Always Made Whole <span class="chip info">GUARANTEED</span></h4>
-          <p>Buyer receives a working product or store credit. Never left empty-handed. Never sees cash leave the system.</p>
-        </div>
-      </div>
+    <div class="sec-title">How a ₦1,000 Listing Actually Pays Out</div>
+    <div class="principle" style="border-left-color:var(--accent-2)">
+      The seller sets their price. We add a flat <b>₦1,000</b> on top. The buyer sees one clean price.
     </div>
+    <div class="example-table" style="margin-top:16px">
+      <div class="row head">
+        <span>Seller Price</span><span>Buyer Pays</span><span>Seller Wallet</span><span>Bond 10%</span>
+      </div>
+      <div class="row"><span>₦1,000</span><span>₦2,000</span><span class="muted">₦900</span><span>₦100</span></div>
+      <div class="row"><span>₦5,000</span><span>₦6,000</span><span class="muted">₦4,500</span><span>₦500</span></div>
+      <div class="row"><span>₦20,000</span><span>₦21,000</span><span class="muted">₦18,000</span><span>₦2,000</span></div>
+      <div class="row"><span>₦100,000</span><span>₦101,000</span><span class="muted">₦90,000</span><span>₦10,000</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.7">
+      <b style="color:#fff">Every seller earns 90% of their asking price.</b> The other 10% routes permanently into their bond — always, without exception.
+    </p>
   </section>
-
-  <!-- BOND TIERS -->
   <section>
-    <div class="sec-title">Seller Bond Tiers</div>
+    <div class="sec-title">Seller Tiers — The Trust Ladder</div>
     <div class="tiers">
-      <div class="tier starter">
-        <div class="name">Starter</div>
-        <div class="bond">₦2,000 <small>bond</small></div>
+      <div class="tier free">
+        <div class="name">Unbonded</div>
+        <div class="bond">Free <small>to join</small></div>
         <ul>
-          <li>Up to 5 active listings</li>
-          <li>Standard search placement</li>
-          <li>Basic claim protection</li>
-          <li>14-day payout hold</li>
+          <li>List and sell freely</li>
+          <li>Build your own storefront</li>
+          <li>Publish extensions for your customers</li>
+          <li>Ranked low in platform search</li>
+          <li>Listing cap: ₦5,000 per product</li>
+          <li class="no">No platform buyer traffic</li>
+          <li class="no">No Replacement Guarantee</li>
+          <li class="no">Buyers purchase at their own risk</li>
         </ul>
-        <span class="badge-final">ENTRY LEVEL</span>
+        <span class="badge-final">REPUTATION-DRIVEN</span>
       </div>
       <div class="tier verified">
         <div class="name">Verified</div>
-        <div class="bond">₦10,000 <small>bond</small></div>
+        <div class="bond">₦2,000+ <small>bond</small></div>
         <ul>
-          <li>Up to 50 listings</li>
-          <li>Boosted search rank</li>
-          <li>Blue verification checkmark</li>
-          <li>7-day payout hold</li>
-          <li>Priority support</li>
+          <li>Verified badge on profile</li>
+          <li>Mid-tier search ranking</li>
+          <li>Listing cap: ₦50,000 per product</li>
+          <li>Bond-backed Replacement Guarantee</li>
+          <li>Limited platform buyer traffic</li>
+          <li>10% of every sale grows the bond</li>
         </ul>
-        <span class="badge-final">GROWTH TIER</span>
+        <span class="badge-final">TRUSTED SELLER</span>
       </div>
       <div class="tier trusted">
         <div class="name">Trusted</div>
-        <div class="bond">₦50,000 <small>bond</small></div>
+        <div class="bond">₦10,000+ <small>bond</small></div>
         <ul>
-          <li>Unlimited listings</li>
-          <li>Top search placement</li>
-          <li>Instant Replacement badge</li>
-          <li>48-hour payout release</li>
+          <li>Top search ranking</li>
+          <li>Unlimited listing value</li>
+          <li>"Instant Replacement" badge</li>
           <li>Featured in referral feed</li>
-          <li>Zero-claim streak rewards</li>
+          <li>Full platform buyer traffic</li>
+          <li>Priority in extension store</li>
         </ul>
         <span class="badge-final">ELITE TIER</span>
       </div>
     </div>
   </section>
-
-  <!-- CLAIM TIMELINE -->
+  <section>
+    <div class="sec-title">What Decides Who Wins a Buyer</div>
+    <div class="ranking">
+      <div class="rank-item"><div class="n">1</div><div><h5>Product Match</h5><p>Name, features, price range — matched to the buyer's search.</p></div></div>
+      <div class="rank-item"><div class="n">2</div><div><h5>Verified Rating</h5><p>Average star rating from real purchases only.</p></div></div>
+      <div class="rank-item"><div class="n">3</div><div><h5>Referral Count</h5><p>How many buyers the seller brought into the platform.</p></div></div>
+      <div class="rank-item"><div class="n">4</div><div><h5>Bond Size</h5><p>Bigger bond = deeper trust = higher ranking.</p></div></div>
+      <div class="rank-item"><div class="n">5</div><div><h5>Claim Response</h5><p>Fast, clean resolutions rank higher than slow ones.</p></div></div>
+      <div class="rank-item"><div class="n">6</div><div><h5>Recent Activity</h5><p>Active sellers rank above inactive ones.</p></div></div>
+    </div>
+  </section>
   <section>
     <div class="sec-title">Claim Resolution Timeline</div>
     <div class="timeline">
-
-      <div class="tl-step done">
-        <div class="tl-dot">1</div>
-        <div class="tl-body">
-          <h4>Delivery & Reveal</h4>
-          <p>Buyer receives one-time access link. Reveals product. Warranty clock starts at reveal, not payment.</p>
-          <div class="meta">
-            <span class="chip info">LOGGED</span>
-            <span class="chip info">DEVICE BOUND</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-step">
-        <div class="tl-dot">2</div>
-        <div class="tl-body">
-          <h4>Buyer Files Claim (In-App)</h4>
-          <p>Within warranty window. Requires evidence: screenshot, timestamp, error. No DMs allowed.</p>
-          <div class="meta">
-            <span class="chip info">EVIDENCE REQUIRED</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-step warn">
-        <div class="tl-dot">3</div>
-        <div class="tl-body">
-          <h4>Seller Notified — 12h Timer</h4>
-          <p>Payout frozen. Seller chooses: Replace · Dispute with evidence · Do nothing.</p>
-          <div class="meta">
-            <span class="chip warn">12 HOURS</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-step danger">
-        <div class="tl-dot">4</div>
-        <div class="tl-body">
-          <h4>Auto-Resolution (If Seller Silent)</h4>
-          <p>Bond slashed. Replacement pulled from shared pool. Payout canceled. Claim marked unresolved on seller profile.</p>
-          <div class="meta">
-            <span class="chip danger">BOND HIT</span>
-            <span class="chip danger">PUBLIC FLAG</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-step good">
-        <div class="tl-dot">5</div>
-        <div class="tl-body">
-          <h4>Buyer Made Whole</h4>
-          <p>New working product delivered, or store credit issued instantly. Seller ranked down for 30 days.</p>
-          <div class="meta">
-            <span class="chip">CLOSED</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="tl-step done"><div class="tl-dot">1</div><div class="tl-body"><h4>Delivery & Reveal</h4><p>Buyer receives one-time access link. Warranty clock starts at reveal.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">2</div><div class="tl-body"><h4>Buyer Files Claim (In-App)</h4><p>In-app screenshot, timestamp, error. No DMs. No gallery uploads.</p></div></div>
+      <div class="tl-step warn"><div class="tl-dot">3</div><div class="tl-body"><h4>Seller Notified — 24h Defense</h4><p>Bond frozen, not deducted. Seller can replace, dispute, or accept.</p></div></div>
+      <div class="tl-step danger"><div class="tl-dot">4</div><div class="tl-body"><h4>3-Strike Review</h4><p>Timing. Evidence. Pattern. All three must pass before any deduction.</p></div></div>
+      <div class="tl-step good"><div class="tl-dot">5</div><div class="tl-body"><h4>Resolution</h4><p>Seller wins → bond unfrozen. Buyer wins → replacement within 1 hour + 7-day appeal right.</p></div></div>
     </div>
   </section>
-
-  <!-- BUYER vs SELLER -->
   <section>
-    <div class="sec-title">Two Sides of the Same Shield</div>
+    <div class="sec-title">Transaction-Locked Ratings</div>
+    <div class="rating-demo">
+      <div class="row"><div>Buyer #A4 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★★</div></div>
+      <div class="row"><div>Buyer #C2 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★☆</div></div>
+      <div class="row"><div>Buyer #F9 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★★</div></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">Buyer vs Seller — Both Sides Protected</div>
     <div class="split">
       <div class="side buyer">
-        <h3>🛒 What the Buyer Sees</h3>
+        <h3>🛒 Buyer Protection</h3>
         <ul>
-          <li><b>Warranty badge</b> on every listing</li>
-          <li><b>One-tap claim</b> inside the app</li>
-          <li><b>12-hour countdown</b> shown live</li>
-          <li><b>Replacement or credit</b> — always</li>
-          <li><b>No cash refunds</b>, clearly stated upfront</li>
-          <li><b>Public seller history</b> of unresolved claims</li>
-          <li><b>Backup pool</b> guarantees delivery even if seller vanishes</li>
+          <li><b>Bonded sellers</b> covered by Replacement Guarantee</li>
+          <li><b>Unbonded sellers</b> flagged at checkout — buyer assumes risk</li>
+          <li><b>Transaction-locked ratings</b> prove real quality</li>
+          <li><b>In-app evidence</b> ensures fast claims</li>
+          <li><b>Buyer Protection Fund</b> covers bond-exhausted sellers</li>
+          <li><b>Cash refunds</b> only in non-delivery or fraud</li>
         </ul>
       </div>
       <div class="side seller">
-        <h3>🏪 What the Seller Sees</h3>
+        <h3>🏪 Seller Protection</h3>
         <ul>
-          <li><b>Bond balance</b> & tier status</li>
-          <li><b>Claim alerts</b> with 12h countdown</li>
-          <li><b>Payout holds</b> per order</li>
-          <li><b>Replacement obligation</b> dashboard</li>
-          <li><b>Dispute upload</b> for false claims</li>
-          <li><b>Rating impact</b> per claim</li>
-          <li><b>Fast Replacer</b> badge for quick resolutions</li>
+          <li><b>Instant wallet credit</b> — no payout holds, ever</li>
+          <li><b>24-hour defense window</b> before any deduction</li>
+          <li><b>7-day appeal right</b> after deduction</li>
+          <li><b>Frozen ≠ deducted</b> — bond intact until claim proven</li>
+          <li><b>False-claim penalties</b> against abusive buyers</li>
+          <li><b>Bond is theirs</b> — refunded on clean exit</li>
         </ul>
       </div>
     </div>
   </section>
-
-  <!-- ANTI-ABUSE -->
   <section>
-    <div class="sec-title">Anti-Abuse Grid</div>
-    <div class="abuse">
-      <div class="threat">
-        <h5>Fake Claim After Full Use</h5>
-        <p>Buyer uses product fully, then files claim at end of window.</p>
-        <span class="fix">Short warranty on consumables; device log proves usage timeline</span>
+    <div class="sec-title">The Eight Locked Rules</div>
+    <div class="rules">
+      <div class="rule"><div class="num">RULE 01</div><h5>Free to Join</h5><p>No listing fees. No monthly fees. No upfront bond charge.</p></div>
+      <div class="rule"><div class="num">RULE 02</div><h5>Flat ₦1,000 Fee</h5><p>Added on top of every listing. One clean price.</p></div>
+      <div class="rule"><div class="num">RULE 03</div><h5>10% Permanent Bond</h5><p>Skimmed from every sale. Grows forever. Never capped.</p></div>
+      <div class="rule"><div class="num">RULE 04</div><h5>Instant Wallet Credit</h5><p>Sellers withdraw anytime. The bond covers the risk.</p></div>
+      <div class="rule"><div class="num">RULE 05</div><h5>Frozen ≠ Deducted</h5><p>Claims freeze bond, but only proven claims move money.</p></div>
+      <div class="rule"><div class="num">RULE 06</div><h5>One-Time Signed Delivery</h5><p>Device-bound access links. No raw credentials in Gmail.</p></div>
+      <div class="rule"><div class="num">RULE 07</div><h5>Transaction-Locked Ratings</h5><p>One rating per verified purchase. Permanent. Public.</p></div>
+      <div class="rule"><div class="num">RULE 08</div><h5>Replace, Never Delay</h5><p>Digital goods replaced. Cash refunds only for non-delivery/fraud.</p></div>
+    </div>
+  </section>
+  <footer>
+    <b>GIMOTRIX · SECURITY, BOND & TRUST v3.0</b><br>
+    Free to join · Flat ₦1,000 fee · Permanent 10% bond · Verified ratings only
+  </footer>
+</div>
+</body>
+                                                                                                                                       </html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security, Bond & Trust — Gimotrix</title>
+<style>
+  :root{
+    --bg:#070b14;
+    --panel:#0f1523;
+    --panel-2:#0a0f1c;
+    --line:#1e293b;
+    --txt:#e2e8f0;
+    --muted:#8b9bb4;
+    --accent:#22d3ee;
+    --accent-2:#a78bfa;
+    --good:#34d399;
+    --warn:#fbbf24;
+    --danger:#f87171;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:
+      radial-gradient(900px 500px at 10% -10%, #1e293b55 0%, transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, #4c1d9522 0%, transparent 60%),
+      var(--bg);
+    color:var(--txt);
+    line-height:1.55;
+    padding:28px 16px 90px;
+    min-height:100vh;
+  }
+  .wrap{max-width:1100px;margin:0 auto}
+  header{
+    text-align:center;
+    padding:40px 24px 34px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,#0b1220,#0a0f1c);
+    margin-bottom:30px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;inset:0;
+    background:radial-gradient(700px 220px at 50% 0%, rgba(34,211,238,.16), transparent 70%);
+    pointer-events:none;
+  }
+  .shield{font-size:36px;margin-bottom:12px;filter:drop-shadow(0 0 14px rgba(34,211,238,.5))}
+  .brand{
+    font-size:clamp(20px,4vw,30px);font-weight:800;letter-spacing:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  header p{color:var(--muted);margin-top:12px;font-size:14px;max-width:640px;margin-left:auto;margin-right:auto}
+  .tagline{
+    display:inline-block;margin-top:16px;
+    font-size:11px;letter-spacing:2px;font-weight:700;
+    padding:6px 14px;border-radius:20px;
+    background:rgba(34,211,238,.1);color:var(--accent);
+    border:1px solid rgba(34,211,238,.3);
+  }
+  section{margin-bottom:34px}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--accent);font-weight:800;margin-bottom:16px;
+  }
+  .sec-title::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .principle{
+    background:linear-gradient(135deg,#0f172a,#0a0f1c);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:12px;padding:22px 20px;
+    font-size:15px;color:#fff;line-height:1.7;
+  }
+  .principle b{color:var(--accent)}
+  .principle .contrast{display:block;margin-top:12px;font-size:13px;color:var(--muted)}
+  .principle .contrast s{color:var(--danger);text-decoration:line-through}
+  .tiers{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .tier{
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);border-radius:16px;padding:22px 18px;
+    position:relative;overflow:hidden;transition:.25s;
+  }
+  .tier:hover{transform:translateY(-4px)}
+  .tier::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+  .tier.free::before{background:linear-gradient(90deg,#64748b,transparent)}
+  .tier.verified::before{background:linear-gradient(90deg,var(--accent),transparent)}
+  .tier.trusted::before{background:linear-gradient(90deg,var(--good),transparent)}
+  .tier:hover.free{border-color:#64748b}
+  .tier:hover.verified{border-color:var(--accent)}
+  .tier:hover.trusted{border-color:var(--good)}
+  .tier .name{font-size:11px;letter-spacing:2px;font-weight:800;color:var(--muted);text-transform:uppercase}
+  .tier .bond{font-size:22px;font-weight:900;color:#fff;margin:8px 0 4px;letter-spacing:-.5px}
+  .tier .bond small{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0}
+  .tier ul{list-style:none;margin-top:14px}
+  .tier li{font-size:12.5px;color:var(--muted);padding:5px 0 5px 20px;position:relative}
+  .tier li::before{content:"✓";position:absolute;left:0;font-weight:900}
+  .tier li.no::before{content:"✕";color:var(--danger)}
+  .tier.free li::before{color:#94a3b8}
+  .tier.verified li::before{color:var(--accent)}
+  .tier.trusted li::before{color:var(--good)}
+  .tier .badge-final{
+    display:inline-block;margin-top:14px;
+    font-size:10px;font-weight:800;letter-spacing:1.5px;
+    padding:4px 10px;border-radius:20px;
+    background:var(--panel);border:1px solid var(--line);color:var(--muted);
+  }
+  .split-flow{
+    display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    margin-bottom:14px;
+  }
+  .wcard{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:12px;padding:16px;position:relative;
+  }
+  .wcard .label{
+    font-size:10px;letter-spacing:2px;font-weight:800;
+    color:var(--accent);margin-bottom:8px;text-transform:uppercase;
+  }
+  .wcard .amount{font-size:20px;color:#fff;font-weight:900;letter-spacing:-.5px}
+  .wcard .desc{font-size:11.5px;color:var(--muted);margin-top:6px}
+  .wcard.good .label{color:var(--good)}
+  .wcard.good .amount{color:var(--good)}
+  .wcard.bond .label{color:var(--accent-2)}
+  .wcard.bond .amount{color:var(--accent-2)}
+  .example-table{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;
+  }
+  .example-table .row{
+    display:grid;grid-template-columns:1fr 1fr 1fr 1fr;
+    padding:12px 16px;font-size:12.5px;
+    border-bottom:1px solid var(--line);gap:10px;
+  }
+  .example-table .row:last-child{border-bottom:none}
+  .example-table .head{
+    background:var(--panel-2);color:var(--accent);
+    font-weight:800;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  }
+  .example-table .row span{color:#fff}
+  .example-table .row .muted{color:var(--muted)}
+  .timeline{
+    background:var(--panel-2);border:1px solid var(--line);
+    border-radius:16px;padding:24px 22px;position:relative;
+  }
+  .tl-step{display:grid;grid-template-columns:42px 1fr;gap:16px;padding-bottom:22px;position:relative}
+  .tl-step:last-child{padding-bottom:0}
+  .tl-step:not(:last-child)::before{
+    content:"";position:absolute;left:20px;top:42px;bottom:0;
+    width:2px;background:linear-gradient(180deg,var(--accent),transparent);
+  }
+  .tl-dot{
+    width:42px;height:42px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:14px;
+    background:var(--panel);border:2px solid var(--accent);
+    color:var(--accent);position:relative;z-index:1;
+  }
+  .tl-step.done .tl-dot{background:var(--accent);color:#0b1220}
+  .tl-step.warn .tl-dot{border-color:var(--warn);color:var(--warn)}
+  .tl-step.danger .tl-dot{border-color:var(--danger);color:var(--danger)}
+  .tl-step.good .tl-dot{border-color:var(--good);color:var(--good)}
+  .tl-body h4{font-size:14px;color:#fff;margin-bottom:4px}
+  .tl-body p{font-size:12.5px;color:var(--muted)}
+  .tl-body .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .split{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .side{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;padding:20px;position:relative;
+  }
+  .side.buyer{border-top:3px solid var(--accent)}
+  .side.seller{border-top:3px solid var(--accent-2)}
+  .side h3{font-size:14px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .side.buyer h3{color:var(--accent)}
+  .side.seller h3{color:var(--accent-2)}
+  .side ul{list-style:none}
+  .side li{
+    font-size:12.5px;color:var(--muted);
+    padding:7px 0 7px 22px;position:relative;
+    border-bottom:1px dashed var(--line);
+  }
+  .side li:last-child{border-bottom:none}
+  .side li::before{content:"▸";position:absolute;left:0;font-weight:900}
+  .side.buyer li::before{color:var(--accent)}
+  .side.seller li::before{color:var(--accent-2)}
+  .side li b{color:#fff;font-weight:600}
+  .rating-demo{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .rating-demo .row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 0;border-bottom:1px dashed var(--line);font-size:13px;
+  }
+  .rating-demo .row:last-child{border-bottom:none}
+  .rating-demo .stars{color:var(--warn);letter-spacing:2px}
+  .rating-demo .vbadge{
+    font-size:9.5px;padding:2px 8px;border-radius:20px;
+    background:rgba(52,211,153,.12);color:var(--good);
+    border:1px solid rgba(52,211,153,.3);font-weight:700;
+    letter-spacing:1px;margin-left:8px;
+  }
+  .rules{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .rule{
+    background:var(--panel);border:1px solid var(--line);
+    border-left:3px solid var(--accent-2);
+    border-radius:12px;padding:16px 18px;
+  }
+  .rule .num{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--accent-2);margin-bottom:6px}
+  .rule h5{font-size:13px;color:#fff;margin-bottom:6px}
+  .rule p{font-size:12px;color:var(--muted)}
+  .ranking{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .rank-item{
+    background:var(--panel-2);border:1px solid var(--line);
+    border-radius:12px;padding:14px;
+    display:flex;gap:12px;align-items:flex-start;
+  }
+  .rank-item .n{font-size:16px;font-weight:900;color:var(--accent);min-width:24px}
+  .rank-item h5{font-size:12.5px;color:#fff;margin-bottom:3px}
+  .rank-item p{font-size:11.5px;color:var(--muted)}
+  footer{
+    text-align:center;margin-top:50px;padding:24px 16px;
+    color:var(--muted);font-size:11px;border-top:1px solid var(--line);
+  }
+  footer b{color:var(--accent);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="shield">🛡️</div>
+    <div class="brand">SECURITY, BOND & TRUST</div>
+    <p>Free to join. Instant payouts. Bond-backed trust. A reputation you actually earned.</p>
+    <div class="tagline">FLAT ₦1,000 FEE · 10% PERMANENT BOND · VERIFIED RATINGS ONLY</div>
+  </header>
+  <section>
+    <div class="sec-title">Core Principle</div>
+    <div class="principle">
+      A seller is not selling a <b>login</b>. A seller is selling a <b>working warranty</b> — backed by their reputation, their bond, and every verified buyer who ever rated them.
+      <span class="contrast">
+        <s>Old model: buyer pays, gets bad product, begs for refund, loses trust.</s><br>
+        <s>Slow model: platform holds payouts, sellers get frustrated, quality drops.</s><br>
+        <b>Gimotrix model:</b> flat fee. Instant wallet credit. Permanent 10% bond. Verified ratings only.
+      </span>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">How a ₦1,000 Listing Actually Pays Out</div>
+    <div class="principle" style="border-left-color:var(--accent-2)">
+      The seller sets their price. We add a flat <b>₦1,000</b> on top. The buyer sees one clean price.
+    </div>
+    <div class="example-table" style="margin-top:16px">
+      <div class="row head">
+        <span>Seller Price</span><span>Buyer Pays</span><span>Seller Wallet</span><span>Bond 10%</span>
       </div>
-      <div class="threat">
-        <h5>Duplicate Claims</h5>
-        <p>Same buyer files multiple claims on one order.</p>
-        <span class="fix">One claim per order, permanently locked</span>
+      <div class="row"><span>₦1,000</span><span>₦2,000</span><span class="muted">₦900</span><span>₦100</span></div>
+      <div class="row"><span>₦5,000</span><span>₦6,000</span><span class="muted">₦4,500</span><span>₦500</span></div>
+      <div class="row"><span>₦20,000</span><span>₦21,000</span><span class="muted">₦18,000</span><span>₦2,000</span></div>
+      <div class="row"><span>₦100,000</span><span>₦101,000</span><span class="muted">₦90,000</span><span>₦10,000</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.7">
+      <b style="color:#fff">Every seller earns 90% of their asking price.</b> The other 10% routes permanently into their bond — always, without exception.
+    </p>
+  </section>
+  <section>
+    <div class="sec-title">Seller Tiers — The Trust Ladder</div>
+    <div class="tiers">
+      <div class="tier free">
+        <div class="name">Unbonded</div>
+        <div class="bond">Free <small>to join</small></div>
+        <ul>
+          <li>List and sell freely</li>
+          <li>Build your own storefront</li>
+          <li>Publish extensions for your customers</li>
+          <li>Ranked low in platform search</li>
+          <li>Listing cap: ₦5,000 per product</li>
+          <li class="no">No platform buyer traffic</li>
+          <li class="no">No Replacement Guarantee</li>
+          <li class="no">Buyers purchase at their own risk</li>
+        </ul>
+        <span class="badge-final">REPUTATION-DRIVEN</span>
       </div>
-      <div class="threat">
-        <h5>Fake Screenshots</h5>
-        <p>Buyer uploads fabricated evidence from gallery.</p>
-        <span class="fix">In-app capture only; metadata verified server-side</span>
+      <div class="tier verified">
+        <div class="name">Verified</div>
+        <div class="bond">₦2,000+ <small>bond</small></div>
+        <ul>
+          <li>Verified badge on profile</li>
+          <li>Mid-tier search ranking</li>
+          <li>Listing cap: ₦50,000 per product</li>
+          <li>Bond-backed Replacement Guarantee</li>
+          <li>Limited platform buyer traffic</li>
+          <li>10% of every sale grows the bond</li>
+        </ul>
+        <span class="badge-final">TRUSTED SELLER</span>
       </div>
-      <div class="threat">
-        <h5>Collusive Fraud</h5>
-        <p>Buyer + friend coordinate fake claims.</p>
-        <span class="fix">Device fingerprint + IP clustering detection</span>
-      </div>
-      <div class="threat">
-        <h5>Serial False Claimants</h5>
-        <p>Buyer abuses the system across multiple sellers.</p>
-        <span class="fix">3+ false claims → manual review, account limited</span>
-      </div>
-      <div class="threat">
-        <h5>Seller Bond Escape</h5>
-        <p>Seller tries to withdraw bond mid-dispute.</p>
-        <span class="fix">Bond locked while any claim is open</span>
+      <div class="tier trusted">
+        <div class="name">Trusted</div>
+        <div class="bond">₦10,000+ <small>bond</small></div>
+        <ul>
+          <li>Top search ranking</li>
+          <li>Unlimited listing value</li>
+          <li>"Instant Replacement" badge</li>
+          <li>Featured in referral feed</li>
+          <li>Full platform buyer traffic</li>
+          <li>Priority in extension store</li>
+        </ul>
+        <span class="badge-final">ELITE TIER</span>
       </div>
     </div>
   </section>
-
-  <!-- MONEY FLOW -->
   <section>
-    <div class="sec-title">Where the Money Physically Sits</div>
-    <div class="money">
-      <h3>🏦 Regulated by Licensed Providers — Not Held by Platform</h3>
-      <div class="money-grid">
-        <div class="money-card">
-          <div class="role">BUYER PAYMENT</div>
-          <div class="holder">Held in Escrow</div>
-          <div class="desc">Paystack / Flutterwave / Stripe Connect holds funds between payment and delivery confirmation.</div>
-        </div>
-        <div class="money-card">
-          <div class="role">SELLER BOND</div>
-          <div class="holder">Locked Reserve Account</div>
-          <div class="desc">Held in provider's Reserve feature. Accessible only on valid claim payout or clean exit.</div>
-        </div>
-        <div class="money-card">
-          <div class="role">SELLER EARNINGS</div>
-          <div class="holder">Provider Sub-Account</div>
-          <div
+    <div class="sec-title">What Decides Who Wins a Buyer</div>
+    <div class="ranking">
+      <div class="rank-item"><div class="n">1</div><div><h5>Product Match</h5><p>Name, features, price range — matched to the buyer's search.</p></div></div>
+      <div class="rank-item"><div class="n">2</div><div><h5>Verified Rating</h5><p>Average star rating from real purchases only.</p></div></div>
+      <div class="rank-item"><div class="n">3</div><div><h5>Referral Count</h5><p>How many buyers the seller brought into the platform.</p></div></div>
+      <div class="rank-item"><div class="n">4</div><div><h5>Bond Size</h5><p>Bigger bond = deeper trust = higher ranking.</p></div></div>
+      <div class="rank-item"><div class="n">5</div><div><h5>Claim Response</h5><p>Fast, clean resolutions rank higher than slow ones.</p></div></div>
+      <div class="rank-item"><div class="n">6</div><div><h5>Recent Activity</h5><p>Active sellers rank above inactive ones.</p></div></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">Claim Resolution Timeline</div>
+    <div class="timeline">
+      <div class="tl-step done"><div class="tl-dot">1</div><div class="tl-body"><h4>Delivery & Reveal</h4><p>Buyer receives one-time access link. Warranty clock starts at reveal.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">2</div><div class="tl-body"><h4>Buyer Files Claim (In-App)</h4><p>In-app screenshot, timestamp, error. No DMs. No gallery uploads.</p></div></div>
+      <div class="tl-step warn"><div class="tl-dot">3</div><div class="tl-body"><h4>Seller Notified — 24h Defense</h4><p>Bond frozen, not deducted. Seller can replace, dispute, or accept.</p></div></div>
+      <div class="tl-step danger"><div class="tl-dot">4</div><div class="tl-body"><h4>3-Strike Review</h4><p>Timing. Evidence. Pattern. All three must pass before any deduction.</p></div></div>
+      <div class="tl-step good"><div class="tl-dot">5</div><div class="tl-body"><h4>Resolution</h4><p>Seller wins → bond unfrozen. Buyer wins → replacement within 1 hour + 7-day appeal right.</p></div></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">Transaction-Locked Ratings</div>
+    <div class="rating-demo">
+      <div class="row"><div>Buyer #A4 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★★</div></div>
+      <div class="row"><div>Buyer #C2 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★☆</div></div>
+      <div class="row"><div>Buyer #F9 · verified purchase <span class="vbadge">VERIFIED</span></div><div class="stars">★★★★★</div></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">Buyer vs Seller — Both Sides Protected</div>
+    <div class="split">
+      <div class="side buyer">
+        <h3>🛒 Buyer Protection</h3>
+        <ul>
+          <li><b>Bonded sellers</b> covered by Replacement Guarantee</li>
+          <li><b>Unbonded sellers</b> flagged at checkout — buyer assumes risk</li>
+          <li><b>Transaction-locked ratings</b> prove real quality</li>
+          <li><b>In-app evidence</b> ensures fast claims</li>
+          <li><b>Buyer Protection Fund</b> covers bond-exhausted sellers</li>
+          <li><b>Cash refunds</b> only in non-delivery or fraud</li>
+        </ul>
+      </div>
+      <div class="side seller">
+        <h3>🏪 Seller Protection</h3>
+        <ul>
+          <li><b>Instant wallet credit</b> — no payout holds, ever</li>
+          <li><b>24-hour defense window</b> before any deduction</li>
+          <li><b>7-day appeal right</b> after deduction</li>
+          <li><b>Frozen ≠ deducted</b> — bond intact until claim proven</li>
+          <li><b>False-claim penalties</b> against abusive buyers</li>
+          <li><b>Bond is theirs</b> — refunded on clean exit</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-title">The Eight Locked Rules</div>
+    <div class="rules">
+      <div class="rule"><div class="num">RULE 01</div><h5>Free to Join</h5><p>No listing fees. No monthly fees. No upfront bond charge.</p></div>
+      <div class="rule"><div class="num">RULE 02</div><h5>Flat ₦1,000 Fee</h5><p>Added on top of every listing. One clean price.</p></div>
+      <div class="rule"><div class="num">RULE 03</div><h5>10% Permanent Bond</h5><p>Skimmed from every sale. Grows forever. Never capped.</p></div>
+      <div class="rule"><div class="num">RULE 04</div><h5>Instant Wallet Credit</h5><p>Sellers withdraw anytime. The bond covers the risk.</p></div>
+      <div class="rule"><div class="num">RULE 05</div><h5>Frozen ≠ Deducted</h5><p>Claims freeze bond, but only proven claims move money.</p></div>
+      <div class="rule"><div class="num">RULE 06</div><h5>One-Time Signed Delivery</h5><p>Device-bound access links. No raw credentials in Gmail.</p></div>
+      <div class="rule"><div class="num">RULE 07</div><h5>Transaction-Locked Ratings</h5><p>One rating per verified purchase. Permanent. Public.</p></div>
+      <div class="rule"><div class="num">RULE 08</div><h5>Replace, Never Delay</h5><p>Digital goods replaced. Cash refunds only for non-delivery/fraud.</p></div>
+    </div>
+  </section>
+  <footer>
+    <b>GIMOTRIX · SECURITY, BOND & TRUST v3.0</b><br>
+    Free to join · Flat ₦1,000 fee · Permanent 10% bond · Verified ratings only
+  </footer>
+</div>
+</body>
+</html>
